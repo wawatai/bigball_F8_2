@@ -184,6 +184,8 @@ html {
             position: absolute;
             top: 83px;
             left: 60px;
+            opacity: 0;
+            animation: showup 0.2s ease-in-out forwards;
           }
 
           .inputBox {
@@ -194,6 +196,8 @@ html {
             top: 134px;
             left: 526px;
             z-index: 100;
+            opacity: 0;
+            animation: fadeIn 0.2s 0.2s ease-in-out forwards;
 
             .input {
               display: flex;
@@ -316,6 +320,8 @@ html {
             top: 246px;
             left: 470px;
             z-index: 5;
+            opacity: 0;
+            animation: fadeIn 0.2s 0.2s ease-in-out forwards;
           }
         }
 
@@ -333,7 +339,19 @@ html {
             top: 321px;
             left: -680px;
             z-index: 4;
-            animation: showIn 0.5s ease-in forwards;
+            opacity: 0;
+            animation: showIn 0.1s 0.8s ease-in forwards;
+
+            &.second {
+              width: 465px;
+              height: 365px;
+              position: absolute;
+              top: 321px;
+              left: -299px;
+              z-index: 2;
+              opacity: 0;
+              animation: showIn2 1s 0.2s ease-in-out forwards;
+            }
           }
         }
       }
@@ -346,6 +364,8 @@ html {
         position: absolute;
         top: 0;
         left: 0;
+        opacity: 0;
+        animation: showup 0.2s ease-in-out forwards;
       }
       //背景
       .bg {
@@ -358,5 +378,85 @@ html {
         z-index: -999;
       }
     }
+  }
+}
+
+@keyframes showup {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showIn {
+  0% {
+    top: 165px;
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    top: 321px;
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    top: 321px;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes showIn2 {
+  0% {
+    top: 321px;
+    left: -2000px;
+    transform: skewX(0deg);
+    opacity: 0;
+  }
+  60% {
+    top: 321px;
+    left: -299px;
+    transform: skewX(-10deg);
+    opacity: 1;
+  }
+  70% {
+    top: 321px;
+    left: -299px;
+    transform: skewX(-10deg);
+    opacity: 1;
+  }
+  80% {
+    top: 321px;
+    left: -299px;
+    transform: skewX(-10deg);
+    opacity: 1;
+  }
+  90% {
+    top: 321px;
+    left: -299px;
+    transform: skewX(-10deg);
+    opacity: 1;
+  }
+  95% {
+    top: 321px;
+    left: -299px;
+    transform: skewX(-10deg);
+    opacity: 1;
+  }
+  100% {
+    top: 321px;
+    left: -299px;
+    transform: skewX(-10deg);
+    opacity: 1;
   }
 }
