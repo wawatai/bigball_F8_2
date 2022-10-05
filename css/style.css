@@ -324,7 +324,6 @@ html body main .center .top .inputBox button:hover, html body main .center .top 
   background: -webkit-gradient(linear, left bottom, left top, from(#ff2400), to(#ffae00));
   background: linear-gradient(to top, #ff2400 0%, #ffae00 100%);
   color: #ffffff;
-  border: 3px solid #ee011e;
 }
 html body main .center .top .unionLogo {
   width: 243px;
