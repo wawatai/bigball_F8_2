@@ -197,9 +197,8 @@ html body main .center .top .logo {
   position: absolute;
   top: 83px;
   left: 60px;
-  opacity: 0;
-  -webkit-animation: showup 0.2s ease-in-out forwards;
-          animation: showup 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.2s ease-in-out, showup 0.2s ease-in-out forwards;
+          animation: invisible 0.2s ease-in-out, showup 0.2s ease-in-out forwards;
 }
 html body main .center .top .inputBox {
   width: auto;
@@ -211,9 +210,8 @@ html body main .center .top .inputBox {
   top: 134px;
   left: 526px;
   z-index: 100;
-  opacity: 0;
-  -webkit-animation: fadeIn 0.2s 0.2s ease-in-out forwards;
-          animation: fadeIn 0.2s 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.2s ease-in-out, fadeIn 0.2s 0.2s ease-in-out forwards;
+          animation: invisible 0.2s ease-in-out, fadeIn 0.2s 0.2s ease-in-out forwards;
 }
 html body main .center .top .inputBox .input {
   display: -webkit-box;
@@ -334,9 +332,8 @@ html body main .center .top .unionLogo {
   top: 246px;
   left: 470px;
   z-index: 5;
-  opacity: 0;
-  -webkit-animation: fadeIn 0.2s 0.2s ease-in-out forwards;
-          animation: fadeIn 0.2s 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.2s ease-in-out, fadeIn 0.2s 0.2s ease-in-out forwards;
+          animation: invisible 0.2s ease-in-out, fadeIn 0.2s 0.2s ease-in-out forwards;
 }
 html body main .center .bottom {
   width: 100%;
@@ -353,8 +350,8 @@ html body main .center .bottom .mainObject {
   left: -680px;
   z-index: 4;
   opacity: 0;
-  -webkit-animation: showIn 0.1s 0.8s ease-in forwards;
-          animation: showIn 0.1s 0.8s ease-in forwards;
+  -webkit-animation: invisible 0.8s ease-in-out, showIn 0.1s 0.8s ease-in forwards;
+          animation: invisible 0.8s ease-in-out, showIn 0.1s 0.8s ease-in forwards;
 }
 html body main .center .bottom .mainObject.second {
   width: 465px;
@@ -363,9 +360,8 @@ html body main .center .bottom .mainObject.second {
   top: 321px;
   left: -299px;
   z-index: 2;
-  opacity: 0;
-  -webkit-animation: showIn2 1s 0.2s ease-in-out forwards;
-          animation: showIn2 1s 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.1s ease-in-out, showIn2 1s 0.1s ease-in-out forwards;
+          animation: invisible 0.1s ease-in-out, showIn2 1s 0.1s ease-in-out forwards;
 }
 html body main .bg2 {
   width: 1920px;
@@ -375,9 +371,8 @@ html body main .bg2 {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  -webkit-animation: showup 0.2s ease-in-out forwards;
-          animation: showup 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.1s ease-in-out, 0.2s 0.1s ease-in-out forwards;
+          animation: invisible 0.1s ease-in-out, 0.2s 0.1s ease-in-out forwards;
 }
 html body main .bg {
   width: 100%;
@@ -389,6 +384,23 @@ html body main .bg {
   z-index: -999;
 }
 
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes showup {
   0% {
     left: -100%;
@@ -398,7 +410,6 @@ html body main .bg {
     opacity: 1;
   }
 }
-
 @keyframes showup {
   0% {
     left: -100%;
